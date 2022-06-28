@@ -1,0 +1,23 @@
+{
+  "name": "himpact",
+  "version": "1.0.0",
+  "description": "``` SELECT Customer_Id, Cust_Name, Customer.City, Grade from Customer LEFT JOIN Salesman ON Customer.Salesman_Id = Salesman.Salesman_Id WHERE Salesman.Commission > 0.12; ```",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "sqlite3": "^5.0.8",
+    "typeorm": "^0.3.6"
+  }
+}
