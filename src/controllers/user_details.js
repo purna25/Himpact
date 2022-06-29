@@ -8,8 +8,8 @@ const getAllUserDetails = async (req, res) => {
   return await getConnection().manager.
     createQueryBuilder(UserDetailsEntity, 'user_details')
     .select()
-    .orderBy('CREATED_AT', "DESC")
-    .addOrderBy('USER_ID', "DESC")
+    .orderBy('CREATED_AT', "ASC")
+    .addOrderBy('USER_ID', "ASC")
     .getMany()
     .then(userDetails => {
       res.status(200).json(userDetails.map(userDetail => {

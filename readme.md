@@ -21,12 +21,12 @@ $npm start
 ### **Endpoints:**
     `status_code` `400` will be accompanied with all routes where there is a need for data validation arises.
 - `/user-details`
-    - **GET**: Returns the array of user details, status code, `200`.
+    - **GET**: Returns the array of user details in the ascending order of created_date_time, status code, `200`.
     - **POST**: Expects the payload with following keys
         ```
         {
             "username": string
-            "password": string, (of min length 6 and amx length 16)
+            "password": string, (of min length 6 and max length 16)
             "contactNumber": integer containing 10 digits
         }
         ```
@@ -42,7 +42,7 @@ $npm start
         ```
         {
             "raw": [],
-            "affected": 1
+            "affected": 2
         }
         ```
         Where the `affected` key tells the number of rows deleted. status code, `200`
